@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+    Author: Derrick Sims
+    Date: October 15, 2026
+    Purpose: Create a personal homepage with About, Projects, and Contact sections.
+    Use JavaScript to welcome visitors by name.
+    -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Derrick Sims - Homepage</title>
+</head>
+
+<body>
+    <header>
+        <h1>Derrick Sims - Homepage</h1>
+
+        <!-- JavaScript updates this message with the visitor's name -->
+        <p id="welcomeMessage">Welcome to my homepage!</p>
+
+        <!-- Navigation links to the three main sections -->
+        <nav>
+            <a href="#about">About</a> |
+            <a href="#projects">Projects</a> |
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- About section introduces the website owner -->
+        <section id="about">
+            <h2>About</h2>
+            <p>
+                Hello! My name is Derrick Sims, and I am a student studying
+                in information technology and software development.
+                
+                This homepage provides a place to share my projects and interests.
+            </p>
+        </section>
+
+        <!-- Project images link to placeholder GitHub project addresses -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>
+                Below are placeholders for three projects.
+                Select an image to visit its GitHub repository.
+            </p>
+
+            <article>
+                <h3>Project One</h3>
+                <a href="https://github.com/YOUR-USERNAME/project-one">
+                    <img src="project1.jpg" alt="Preview of Project One" width="300" />
+                </a>
+                <p>A placeholder for my first completed project.</p>
+            </article>
+
+            <article>
+                <h3>Project Two</h3>
+                <a href="https://github.com/YOUR-USERNAME/project-two">
+                    <img src="project2.jpg" alt="Preview of Project Two" width="300" />
+                </a>
+                <p>A placeholder for my second completed project.</p>
+            </article>
+
+            <article>
+                <h3>Project Three</h3>
+                <a href="https://github.com/YOUR-USERNAME/project-three">
+                    <img src="project3.jpg" alt="Preview of Project Three" width="300" />
+                </a>
+                <p>A placeholder for my third completed project.</p>
+            </article>
+        </section>
+
+        <!-- Contact form collects the sender's information and message -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Use the form below to enter your contact information and message.</p>
+
+            <form>
+                <p>
+                    <label for="senderName">Sender Name:</label><br />
+                    <input type="text" id="senderName" name="senderName" required />
+                </p>
+
+                <p>
+                    <label for="senderEmail">Email Address:</label><br />
+                    <input type="email" id="senderEmail" name="senderEmail" required />
+                </p>
+
+                <p>
+                    <label for="subject">Subject:</label><br />
+                    <input type="text" id="subject" name="subject" required />
+                </p>
+
+                <p>
+                    <label for="message">Message:</label><br />
+                    <textarea id="message" name="message" rows="6" cols="40" required></textarea>
+                </p>
+
+                <input type="submit" value="Submit" />
+            </form>
+        </section>
+    </main>
+
+    <script>
+        // Prompt the visitor for their name and store it in a variable
+        var visitorName = prompt("What is your name?");
+
+        // Display a personalized welcome when the visitor enters a name
+        if (visitorName !== null && visitorName.trim() !== "") {
+            document.getElementById("welcomeMessage").textContent =
+                "Welcome to my homepage, " + visitorName.trim() + "!";
+        }
+    </script>
+</body>
+</html>
